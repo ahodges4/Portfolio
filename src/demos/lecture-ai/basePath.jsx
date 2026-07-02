@@ -1,0 +1,1 @@
+export const DEMO_BASE = "/projects/lecture-ai/demo";

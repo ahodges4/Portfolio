@@ -1,0 +1,814 @@
+.lecture-demo-app {
+    margin: 0;
+    background: #2C3333;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.lecture-demo-app .header {
+    background: #2E4F4F;
+    
+}
+.lecture-demo-app .header::after {
+    content: '';
+    display:table;
+    clear:both;
+}
+.lecture-demo-app .nav {
+    float:right;
+    height: 70px;
+}
+.lecture-demo-app .nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lecture-demo-app .nav li {
+    display: inline-block;
+    margin-left: 60px;
+    padding-top: 28px;
+    position: relative;
+}
+.lecture-demo-app .nav--Link {
+    color: #CBE4DE;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.lecture-demo-app .nav--Link:hover {
+    color: #707e7a;
+}
+.lecture-demo-app .nav--Link::before {
+    content: '';
+    display: block;
+    height: 5px;
+    
+    background-color: #58615e;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+.lecture-demo-app .nav--Link:hover::before {
+    width: 100%;
+}
+.lecture-demo-app .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+.lecture-demo-app .nav--container {
+    width:80%;
+    margin: 0 auto;
+}
+.lecture-demo-app .nav--logo {
+    float: left;
+    padding: 5px 0;
+    height: 50px;
+}
+/* Create Transcript */
+
+.lecture-demo-app .CreateTranscript--SubHeader {
+    background-color: #3c6868;
+}
+/* Recording Field */
+.lecture-demo-app .ReturnField--transcript {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #CBE4DE;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px 10px;
+}
+.lecture-demo-app .ReturnField--button {
+    width: 150px;
+    height: 50px;
+    border: 2px solid #f8f9fa;
+    border-radius: 10px;
+    color: #3c4043;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+.lecture-demo-app .ReturnField--button:active {
+    background-color: #c4c5c5;
+    
+}
+.lecture-demo-app .ReturnField--button {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lecture-demo-app .ReturnField--button:hover {
+    background-color: #45a049;
+}
+.lecture-demo-app .ReturnField--Stopbutton {
+    width: 30%;
+    background-color: #ff0000;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lecture-demo-app .ReturnField--Stopbutton:hover {
+    background-color: #aa0101;
+}
+/* Transcript Table */
+.lecture-demo-app .TranscriptsTable--Table {
+    
+    border-collapse: collapse; 
+    font-size: 1rem;
+    margin-Bottom: 20px;
+
+    width: 80%;
+    
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.lecture-demo-app .TranscriptsTable {
+    padding-top: 5px;
+}
+.lecture-demo-app .TranscriptsTable--Table th {
+    background-color: #0E8388;
+    color: #333333;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-align: left;
+}
+.lecture-demo-app .TranscriptTable--Cell {
+    background-color: #CBE4DE;
+    border-bottom: 2px solid #5c5a5a;
+    color: #333333;
+    padding: 12px 16px;
+}
+.lecture-demo-app .TranscriptTable--Transcript {
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    background-color: #CBE4DE;
+    color: #333333;
+    padding: 12px 16px;
+}
+.lecture-demo-app .TranscriptsTable--SQButton--Div {
+    margin: 0 30%;
+    padding: 20px 0;
+    background-color: #CBE4DE;
+    border-radius: 5px;
+    width:40%
+}
+.lecture-demo-app .TranscriptsTable--SQButton--Div h3 {
+    margin-top: 5px;
+}
+.lecture-demo-app .TranscriptsTable--SQButton {
+    background-color: #009578;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 100%;
+    padding: 10px 10px;
+    margin-top: 20px;
+}
+.lecture-demo-app .TranscriptsTable--SQButton:hover {
+    cursor: pointer;
+    background-color: #008168;
+}
+.lecture-demo-app .TranscriptsTable--SQButton:active {
+    background-color: #006e58;
+}
+/* Question Grid */
+.lecture-demo-app .QuestionGrid--QuestionStatement {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 10px;
+    font-weight: 500;
+}
+.lecture-demo-app .QuestionGrid--QuestionStatement--div-outer {
+    background-color: #CBE4DE;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    border: 5px solid rgb(114, 114, 114);
+
+    
+}
+.lecture-demo-app .QuestionGrid--QuestionStatement--div-inner {
+    padding: 20px 10px;
+}
+.lecture-demo-app .QuestionGrid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    margin-bottom: 50px;
+    
+}
+/* Question */
+.lecture-demo-app .Question {
+    background-color: #CBE4DE;
+    border: 4px solid rgb(114, 114, 114);
+    padding-top: 0px;
+    position: relative;
+}
+.lecture-demo-app .Question h2 {
+    background-color: #0E8388;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 0px;
+    display: inline-block;
+    width: 100%;
+    
+}
+.lecture-demo-app .Question ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 50px;
+}
+.lecture-demo-app .Question li {
+    padding-bottom: 3px;
+}
+.lecture-demo-app .Question--Button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+
+    background-color: #026955;
+    border: none ;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px 10px;
+}
+.lecture-demo-app .Question--Button:hover {
+    background-color: #025c4a;
+    cursor: pointer;
+}
+.lecture-demo-app .Question--Button:active {
+    background-color: #024638;
+}
+/* Video Player */
+.lecture-demo-app .VideoPlayer--VideoElement {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.lecture-demo-app .VideoPlayer--Controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    background-color: #CBE4DE;
+    padding: 5px;
+    border-radius: 10px;
+}
+.lecture-demo-app .VideoPlayer--Controls img {
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+}
+.lecture-demo-app .VideoPlayer--VolumeButton {
+    margin-left: 20px;
+}
+.lecture-demo-app .VideoPlayer--VolumeControl {
+    position: absolute;
+    top: -115px;
+    left: calc(50% - 70px);
+    background-color: #CBE4DE;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px grey ;
+    z-index: 1;
+    margin-left: 20px;
+    transform-origin: bottom;
+    transform: rotate(270deg);
+}
+.lecture-demo-app .VideoPlayer--QuestionsContinueButton {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-bottom: 80px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Lecture Table */
+
+.lecture-demo-app .LectureTable {
+    padding-top: 20px;
+    overflow-x: auto;
+}
+.lecture-demo-app .LectureTable--Table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lecture-demo-app .LectureTable--Table th {
+    background-color: #0E8388;
+    color: #333333;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-align: center;
+}
+.lecture-demo-app .LectureTable--Table td {
+    background-color: #CBE4DE;
+    border-bottom: 2px solid #5c5a5a;
+    color: #333333;
+    padding: 12px 16px;
+    overflow-wrap: break-word;
+}
+.lecture-demo-app .LectureTable--Table tr {
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+}
+.lecture-demo-app .LectureTable--URL {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+.lecture-demo-app .LectureTable--URL img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center center;
+}
+.lecture-demo-app .LectureTable button {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lecture-demo-app .LectureTable button:hover {
+    background-color: #45a049;
+}
+.lecture-demo-app .LectureTable--Edit, .lecture-demo-app .LectureTable--Delete {
+    max-height: 30px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+
+}
+.lecture-demo-app .LectureTable--AddIcon {
+    max-height: 25px;
+    cursor: pointer;
+    border: 6px solid #CBE4DE;
+    border-radius: 50%;
+    background-color: #CBE4DE;
+}
+/* Add Window */
+
+.lecture-demo-app .AddWindow--Automatic {
+    padding-top: 20px;
+}
+.lecture-demo-app .AddWindow--Manual--Name {
+    margin: 0 30%;
+    margin-top: 3px;
+    margin-bottom: 20px;
+    width: 40%;
+    height: 20px;
+}
+.lecture-demo-app .AddWindow--Form {
+    margin: 15px 50px;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5px;
+}
+.lecture-demo-app .EditWindow--Form button[type="submit"] {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lecture-demo-app .AddWindow--Form textarea {
+    margin-top: 3px;
+    height: 500px;
+    width: 100%;
+}
+.lecture-demo-app .AddWindow--Form textarea.valid {
+    border-color: green;
+}
+.lecture-demo-app .AddWindow--Form textarea.invalid {
+    border-color: red;
+}
+.lecture-demo-app .AddWindow--Form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.lecture-demo-app .AddWindow--Div {
+    border-radius: 5px;
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #CBE4DE;
+}
+.lecture-demo-app .AddWindow--Form button[type="submit"] {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Edit Window */
+.lecture-demo-app .EditWindow {
+    min-height: 600px;
+}
+.lecture-demo-app .EditWindow--Form {
+    margin: 15px 50px;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5px;
+}
+.lecture-demo-app .EditWindow--Form input[type="text"], .lecture-demo-app .EditWindow--Form select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.lecture-demo-app .EditWindow--Form input[type="text"].valid {
+    border-color: green;
+}
+.lecture-demo-app .EditWindow--Form input[type="text"].invalid {
+    border-color: red;
+}
+.lecture-demo-app .CloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    height: 40px;
+}
+.lecture-demo-app .EditWindow--Form button[type="submit"] {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lecture-demo-app .EditWindow--Form textarea {
+    height: 500px;
+    width: 100%;
+}
+.lecture-demo-app .EditWindow--Form textarea.valid {
+    border-color: green;
+}
+.lecture-demo-app .EditWindow--Form textarea.invalid {
+    border-color: red;
+}
+.lecture-demo-app .EditWindow--Form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.lecture-demo-app .EditWindow--Div {
+    border-radius: 5px;
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #CBE4DE;
+}
+.lecture-demo-app .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.lecture-demo-app .modal {
+    position: absolute;
+    z-index: 10000;
+    background-color: #CBE4DE;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    top: 5%;
+    overflow: auto;
+    padding: 20px;
+}
+/* Edit Window transcript table */
+.lecture-demo-app .EditWindow--TranscriptsTable--Table {
+    border-collapse: collapse; 
+    font-size: 1rem;
+    margin-Bottom: 20px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 3px solid #0E8388;
+}
+.lecture-demo-app .EditWindow--TranscriptsTable {
+    padding-top: 5px;
+    
+}
+.lecture-demo-app .EditWindow--TranscriptsTable--Table th {
+    background-color: #0E8388;
+    color: #333333;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-align: left;
+}
+.lecture-demo-app .EditWindow--TranscriptsTable--Table td {
+    background-color: #CBE4DE;
+    border-bottom: 2px solid #5c5a5a;
+    color: #333333;
+    padding: 12px 16px;
+}
+.lecture-demo-app .EditWindow--Form textarea {
+    resize: vertical;
+}
+/* Add Transcript */
+.lecture-demo-app .AddTranscript--RecordAudio {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lecture-demo-app .AddTranscript--RecordAudio:hover {
+    background-color: #45a049;
+}
+/* Transcript Sub Header */
+
+.lecture-demo-app .subHeader {
+    background: #2E4F4F;
+    width: 30%;
+    margin: 0px 35%;
+    border-radius: 50px;
+    
+}
+.lecture-demo-app .subHeader::after {
+    content: '';
+    display:table;
+    clear:both;
+}
+.lecture-demo-app .subNav {
+    height: 70px;
+}
+.lecture-demo-app .subNav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lecture-demo-app .subNav li {
+    display: inline-block;
+    margin: 0 30px;
+    padding-top: 28px;
+    position: relative;
+}
+.lecture-demo-app .subNav--Link {
+    color: #CBE4DE;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.lecture-demo-app .subNav--Link:hover {
+    color: #707e7a;
+}
+.lecture-demo-app .subNav--Link::before {
+    content: '';
+    display: block;
+    height: 5px;
+    
+    background-color: #58615e;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+.lecture-demo-app .subNav--Link:hover::before {
+    width: 100%;
+}
+.lecture-demo-app .subNav--container {
+    width:80%;
+    margin: 0 auto;
+}
+/* Video File Transcript  */
+.lecture-demo-app .FileTranscript--Div input {
+    width: auto;
+    height: auto;
+    padding: 2px 2px;
+    margin-top: 20px;
+    border: 2px solid #f8f9fa;
+    border-radius: 10px;
+    color: #3c4043;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+.lecture-demo-app .FileTranscript--Div button[type="submit"] {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 35%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Mobile responsiveness
+   Most of the layout above uses fixed pixel widths or narrow percentage
+   widths (e.g. "width: 30%; margin: 20px 35%") that assume a wide desktop
+   viewport. These overrides widen things out and stack multi-column layouts
+   on smaller screens rather than rewriting the base rules, so desktop is
+   unaffected.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Header / nav: switch from the floated desktop layout to a centered,
+       wrapping flex layout so nav items don't get pushed off-screen. */
+    .lecture-demo-app .nav--container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .lecture-demo-app .nav--logo {
+        float: none;
+    }
+    .lecture-demo-app .nav {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    .lecture-demo-app .nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 20px;
+    }
+    .lecture-demo-app .nav li {
+        margin: 0;
+        padding-top: 8px;
+    }
+
+    .lecture-demo-app .subHeader {
+        width: 90%;
+        margin: 0 5%;
+    }
+    .lecture-demo-app .subNav--container {
+        width: 100%;
+    }
+    .lecture-demo-app .subNav li {
+        margin: 0 12px;
+    }
+
+    /* Narrow fixed-percentage fields become nearly full-width */
+    .lecture-demo-app .ReturnField--transcript {
+        width: 90%;
+    }
+    .lecture-demo-app .AddWindow--Manual--Name {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .lecture-demo-app .TranscriptsTable--SQButton--Div {
+        width: 90%;
+        margin: 0 5%;
+    }
+    .lecture-demo-app .EditWindow--Form input[type="text"],
+    .lecture-demo-app .EditWindow--Form select {
+        width: 100%;
+    }
+
+    /* Buttons that were 30% wide with 35% side margins become nearly
+       full-width instead of shrinking to a sliver of text */
+    .lecture-demo-app .ReturnField--button,
+    .lecture-demo-app .ReturnField--Stopbutton,
+    .lecture-demo-app .AddWindow--Form button[type="submit"],
+    .lecture-demo-app .EditWindow--Form button[type="submit"],
+    .lecture-demo-app .AddTranscript--RecordAudio,
+    .lecture-demo-app .FileTranscript--Div button[type="submit"],
+    .lecture-demo-app .LectureTable button {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .lecture-demo-app .VideoPlayer--QuestionsContinueButton {
+        width: 90%;
+    }
+
+    /* Question grid: 3 columns is too cramped below tablet width */
+    .lecture-demo-app .QuestionGrid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        gap: 1rem;
+    }
+    .lecture-demo-app .QuestionGrid--QuestionStatement--div-outer {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    /* Transcript tables: same overflow risk as the lecture table, widen and
+       allow horizontal scroll as a fallback rather than clipping content */
+    .lecture-demo-app .TranscriptsTable,
+    .lecture-demo-app .EditWindow--TranscriptsTable {
+        overflow-x: auto;
+    }
+    .lecture-demo-app .TranscriptsTable--Table,
+    .lecture-demo-app .EditWindow--TranscriptsTable--Table {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Modals: less side padding so content has more room on a narrow screen */
+    .lecture-demo-app .modal {
+        width: 92%;
+        padding: 16px;
+    }
+    .lecture-demo-app .AddWindow--Div,
+    .lecture-demo-app .EditWindow--Div {
+        margin: 16px auto;
+        padding: 16px;
+    }
+    .lecture-demo-app .AddWindow--Form,
+    .lecture-demo-app .EditWindow--Form {
+        margin: 15px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* On very small phones, drop to a single column and slightly smaller
+       type so nothing has to squeeze */
+    .lecture-demo-app .QuestionGrid {
+        grid-template-columns: 1fr;
+    }
+    .lecture-demo-app {
+        font-size: 0.95rem;
+    }
+    .lecture-demo-app .nav--Link,
+    .lecture-demo-app .subNav--Link {
+        font-size: 0.85rem;
+    }
+    .lecture-demo-app .LectureTable--Table th,
+    .lecture-demo-app .LectureTable--Table td,
+    .lecture-demo-app .TranscriptsTable--Table th,
+    .lecture-demo-app .TranscriptTable--Cell {
+        padding: 8px 10px;
+    }
+}
