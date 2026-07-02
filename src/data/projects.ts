@@ -77,17 +77,17 @@ export const projects: Project[] = [
   // --- Not featured ---
   {
     id: "nhs-excel-filter",
-    title: "Automated Report Data Filter",
+    title: "NHS Trust Team Performance Report Filter",
     shortDescription:
-      "Web app that takes an uploaded spreadsheet and automatically filters it down to only the relevant fields, cutting a manual weekly reporting task down to seconds.",
-    technologies: ["Python", "Flask", "Pandas"],
+      "Built for my mum, a team manager at the NHS, to automate a weekly task: given a spreadsheet covering data for the whole trust, it detects the report type, fuzzy-matches the relevant columns even if headers shift slightly between exports, filters it down to just the teams she oversees, and re-exports it with the original formatting intact.",
+    technologies: ["Python", "FastAPI", "Pandas", "openpyxl", "Docker"],
     featured: false,
     priority: 70,
     year: 2025,
     status: "Completed",
     demoType: "static-examples",
     links: [
-      
+
     ],
   },
 
