@@ -87,7 +87,7 @@ export const projects: Project[] = [
     status: "Completed",
     demoType: "static-examples",
     links: [
-      { label: "GitHub", url: "https://github.com/yourname/report-filter" },
+      
     ],
   },
 
